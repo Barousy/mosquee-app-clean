@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Système de Gestion Scolaire Islamique
 
-## Getting Started
+Système de gestion scolaire moderne adapté aux écoles coraniques et islamiques.
 
-First, run the development server:
+## Fonctionnalités
+
+- 📖 **Suivi du Coran** : Mémorisation, révision et lecture par sourate et versets
+- 🏫 **Gestion des classes** : Organisation par niveau (Hifdh, Tajwid, Arabe, matières générales)
+- ⏰ **Emploi du temps** : Planification avec intégration des horaires de prières
+- 📝 **Notes et évaluations** : Système adapté aux matières islamiques et générales
+- 🌍 **Multilingue** : Interface en français, arabe et anglais avec support RTL
+- 🏢 **Multi-tenant** : Espace isolé et sécurisé pour chaque mosquée
+- 👨‍👩‍👧‍👦 **Espace parents** : Espace dédié aux parents pour le suivi et pour la communication avec l'administration
+- 👶 **Espace enfants** : Espace dédié aux enfants pour le suivi pédagogique
+
+## Technologies
+
+- **Frontend** : Next.js 15, React 19, TypeScript
+- **Styling** : Tailwind CSS v4
+- **Déploiement** : Vercel
+- **Base de données** : Neon (PostgreSQL)
+
+## Installation locale
 
 ```bash
+# Cloner le repository
+git clone https://github.com/barousy/mosquee-app-clean.git
+cd mosquee-app-clean
+
+# Installer les dépendances
+npm install
+
+# Démarrer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Identifiants de connexion par défaut
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Après avoir initialisé la base de données, vous pouvez vous connecter avec :
+- **Email** : admin@ecole.com
+- **Mot de passe** : admin123
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts disponibles
 
-## Learn More
+- `npm run dev` - Serveur de développement
+- `npm run build` - Build de production
+- `npm run start` - Serveur de production
+- `npm run lint` - Linting ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## Déploiement
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel
+1. Connectez le repository GitHub à Vercel
+2. Configurez les variables d'environnement
+3. Le site sera automatiquement déployé
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Variables d'environnement
+```env
+DATABASE_URL=your_neon_database_url
+NEXTAUTH_SECRET=your_secret_key
+NEXTAUTH_URL=https://your-domain.vercel.app
+```
 
-## Deploy on Vercel
+## Licence
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ce projet est sous licence MIT.
